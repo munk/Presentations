@@ -1,0 +1,25 @@
+PDS_VERSION_ID                    = PDS3
+RECORD_TYPE                       = STREAM
+LABEL_REVISION_NOTE               = "NULL"
+
+OBJECT                            = INSTRUMENT_HOST
+  INSTRUMENT_HOST_ID              = "MDM"
+
+  OBJECT                          = INSTRUMENT_HOST_INFORMATION
+    INSTRUMENT_HOST_NAME          = "MICHIGAN-DARTMOUTH-MIT OBSERVATORY"
+    INSTRUMENT_HOST_TYPE          = "EARTH BASED"
+    INSTRUMENT_HOST_DESC          = "
+
+  Instrument Host Overview
+  ========================
+  The Michigan-Dartmouth-MIT Observatory is located on the southwest
+  ridge of Kitt Peak in Arizona, USA.  The principal telescope is the
+  2.4m Hiltner telescope."
+
+  END_OBJECT                      = INSTRUMENT_HOST_INFORMATION
+
+  OBJECT                          = INSTRUMENT_HOST_REFERENCE_INFO
+    REFERENCE_KEY_ID              = "N/A"
+  END_OBJECT                      = INSTRUMENT_HOST_REFERENCE_INFO
+END_OBJECT                        = INSTRUMENT_HOST
+END

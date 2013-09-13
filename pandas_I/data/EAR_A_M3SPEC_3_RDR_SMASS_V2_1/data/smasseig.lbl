@@ -1,0 +1,120 @@
+PDS_VERSION_ID        = PDS3                                                  
+                                                                              
+RECORD_TYPE           = "FIXED_LENGTH"                                        
+RECORD_BYTES          = 50                                                    
+FILE_RECORDS          = 50                                                    
+                                                                              
+^TABLE                = "smasseig.tab"                                        
+                                                                              
+DATA_SET_ID           = "EAR-A-M3SPEC-3-RDR-SMASS-V2.1"                       
+PRODUCT_NAME          = "SMASS PCA Eigenvectors Table"                        
+PRODUCT_ID            = "SMASS-SMASSEIG-199604"                               
+INSTRUMENT_HOST_NAME  = "MICHIGAN-DARTMOUTH-MIT OBSERVATORY"                  
+INSTRUMENT_NAME       = "MARK III SPECTROGRAPH"                               
+TARGET_NAME           = "ASTEROID"                                            
+START_TIME            = 1990                                                  
+STOP_TIME             = 1994                                                  
+PRODUCT_CREATION_TIME = 1996-03-29  /* Peer Review Date */                    
+RECORD_FORMAT         = "(i5,2x,4(2x,f8.5))"                                  
+                                                                              
+OBJECT     = TABLE                                                            
+  ROWS               = 50                                                     
+  ROW_BYTES          = 50                                                     
+  INTERCHANGE_FORMAT = "ASCII"                                                
+  COLUMNS            = 5                                                      
+  DESCRIPTION        = "                                                      
+    ------------------------------------------------------------------------- 
+    SMALL MAIN-BELT ASTEROID SPECTROSCOPIC SURVEY (SMASS)                     
+                                                                              
+    Principal component eigenvectors used in Xu et al. (1995),                
+    Icarus 115, 1-35, Table I and Figure 3.                                   
+                                                                              
+                                                                              
+    The principal components PC1 and PC2 for each asteroid are calculated     
+    from the observed reflectances (normalized to unity at 5500 A), at 50     
+    equally spaced wavelengths from 4800 - 9700 A.  At the ith wavelength:    
+                                                                              
+    lambda(i) = Wavelength                                                    
+        E1(i) = ith Eigenvector coefficient for PC1                           
+        E2(i) = ith Eigenvector coefficient for PC2                           
+         R(i) = Asteroid reflectance at lambda(i)                             
+                (normalized to unity at 5500A)                                
+         m(i) = mean value of R(i) for the entire set of asteroid spectra     
+         s(i) = standard deviation of R(i) for the entire set of asteroid     
+                spectra                                                       
+                                                                              
+    PC1 and PC2 are calculated as follows:                                    
+                                                                              
+               50                                                             
+         PC1 = SUM E1(i)*{[R(i)-m(i)]/s(i)}                                   
+               i=1                                                            
+                                                                              
+               50                                                             
+         PC2 = SUM E2(i)*{[R(i)-m(i)]/s(i)}                                   
+               i=1                                                            
+                                                                              
+     (where 'SUM' represents the standard mathematical summation notation)    
+                                                                              
+    ------------------------------------------------------------------------- 
+    "                                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 1                                                         
+    NAME          = "WAVELENGTH"                                              
+    UNIT          = "ANGSTROM"                                                
+    DATA_TYPE     = "ASCII_INTEGER"                                           
+    START_BYTE    = 1                                                         
+    BYTES         = 5                                                         
+    FORMAT        = "I5"                                                      
+    DESCRIPTION   = "lambda(i); the ith wavelength where i is the             
+      record number"                                                          
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 2                                                         
+    NAME          = "EIGENVECTOR_1"                                           
+    DATA_TYPE     = "ASCII_REAL"                                              
+    START_BYTE    = 10                                                        
+    BYTES         = 8                                                         
+    FORMAT        = "F8.5"                                                    
+    DESCRIPTION   = "E1(i); ith coefficient of the eigenvector for the first  
+      principal component, where i is the record number"                      
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 3                                                         
+    NAME          = "EIGENVECTOR_2"                                           
+    DATA_TYPE     = "ASCII_REAL"                                              
+    START_BYTE    = 20                                                        
+    BYTES         = 8                                                         
+    FORMAT        = "F8.5"                                                    
+    DESCRIPTION   = "E2(i); ith coefficient of the eigenvector for the second 
+      principal component, where i is the record number"                      
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 4                                                         
+    NAME          = "REFLECTANCE_MEAN"                                        
+    DATA_TYPE     = "ASCII_REAL"                                              
+    START_BYTE    = 30                                                        
+    BYTES         = 8                                                         
+    FORMAT        = "F8.5"                                                    
+    DESCRIPTION   = "m(i); mean value of R(i) for the entire set of asteroid  
+      spectra, where i is the record number.  R(i) is the asteroid reflectance
+      at lambda(i) normalized to unity at 5500A."                             
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 5                                                         
+    NAME          = "REFLECTANCE_STD_DEV"                                     
+    DATA_TYPE     = "ASCII_REAL"                                              
+    START_BYTE    = 40                                                        
+    BYTES         = 8                                                         
+    FORMAT        = "F8.5"                                                    
+    DESCRIPTION   = "s(i); standard deviation of R(i) for the entire set of   
+      asteroid spectra, where i is the record number.  R(i) is the asteroid   
+      reflectance at lambda(i) normalized to unity at 5500A."                 
+  END_OBJECT = COLUMN                                                         
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           

@@ -1,0 +1,40 @@
+PDS_VERSION_ID                    = PDS3
+RECORD_TYPE                       = STREAM
+LABEL_REVISION_NOTE               = "NULL"
+
+OBJECT                            = INSTRUMENT
+  INSTRUMENT_HOST_ID              = "MDM"
+  INSTRUMENT_ID                   = "M3SPEC"
+
+  OBJECT                          = INSTRUMENT_INFORMATION
+    INSTRUMENT_NAME               = "MARK III SPECTROGRAPH"
+    INSTRUMENT_TYPE               = "OPTICAL SPECTROGRAPH"
+    INSTRUMENT_DESC               = "
+
+  Instrument Overview
+  ===================
+  The SMASS survey was carried out using the Mark III spectrograph,
+  equipped with a TI 4849 CCD (398 x 598 pixels) with a
+  low-resolution grism (150 line.mm, blazed at 7300 A) to cover the
+  wavelength range from 4000 to 10000 A in a single exposure, with a
+  dispersion of ~10 A/pixel.  A Wratten 12 filter (cutoff < 6000 A)
+  was placed of the red spectral half of the CCD dewar window to
+  block the second order spectral image.
+ 
+ 
+  Scientific Objectives
+  =====================
+  The setup described above has the ability to image the entire
+  spectrum in a single exposure and has many advantages over piecing
+  together the different spectral regions from separate images.  In
+  particular, the effects resulting from the asteroid's rotational
+  lightcurve can be neglected when the entire spectral range is
+  imaged simultaneously."
+
+  END_OBJECT                      = INSTRUMENT_INFORMATION
+
+  OBJECT                          = INSTRUMENT_REFERENCE_INFO
+    REFERENCE_KEY_ID              = "XUETAL1995"
+  END_OBJECT                      = INSTRUMENT_REFERENCE_INFO
+END_OBJECT                        = INSTRUMENT
+END

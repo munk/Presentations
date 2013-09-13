@@ -1,0 +1,54 @@
+PDS_VERSION_ID        = PDS3                                                  
+                                                                              
+RECORD_TYPE           = "FIXED_LENGTH"                                        
+RECORD_BYTES          = 13                                                    
+FILE_RECORDS          = 513                                                   
+                                                                              
+^TABLE                = "5145pholus.tab"                                      
+                                                                              
+DATA_SET_ID           = "EAR-A-M3SPEC-3-RDR-SMASS-V2.1"                       
+PRODUCT_NAME          = "SMASS SPECTRUM: 5145 PHOLUS"                         
+PRODUCT_ID            = "SMASS-5145PHOLUS-200012"                             
+INSTRUMENT_HOST_NAME  = "MICHIGAN-DARTMOUTH-MIT OBSERVATORY"                  
+INSTRUMENT_NAME       = "MARK III SPECTROGRAPH"                               
+TARGET_NAME           = "5145 PHOLUS"                                         
+START_TIME            = 1990                                                  
+STOP_TIME             = 1994                                                  
+PRODUCT_CREATION_TIME = 2000-12-13                                            
+                                                                              
+OBJECT     = TABLE                                                            
+  ROWS               = 513                                                    
+  ROW_BYTES          = 13                                                     
+  INTERCHANGE_FORMAT = "ASCII"                                                
+  COLUMNS            = 2                                                      
+  DESCRIPTION        = "This spectrum was extracted from the main data        
+    table in 'smass.tab'."                                                    
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 1                                                         
+    NAME          = "WAVELENGTH"                                              
+    DATA_TYPE     = "ASCII_INTEGER"                                           
+    START_BYTE    = 1                                                         
+    BYTES         = 5                                                         
+    FORMAT        = "I5"                                                      
+    UNIT          = "ANGSTROM"                                                
+    DESCRIPTION   = "The wavelength of the reflectance, following"            
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 2                                                         
+    NAME          = "REFLECTANCE"                                             
+    DATA_TYPE     = "ASCII_REAL"                                              
+    START_BYTE    = 7                                                         
+    BYTES         = 5                                                         
+    FORMAT        = "F5.3"                                                    
+    DESCRIPTION   = "Reflectance scaled to 5500 Angstroms. Because            
+      there are rarely any reflectance values at precisely 5500               
+      Angstroms, normalization was performed at 5500 Angstroms                
+      on a polynomial fit to the spectra.  Due to noise, the                  
+      reflectance values straddling 5500 Angstroms may not straddle           
+      a reflectance of unity."                                                
+  END_OBJECT = COLUMN                                                         
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           

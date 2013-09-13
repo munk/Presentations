@@ -1,0 +1,707 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 384                                      
+FILE_RECORDS                       = 146                                      
+                                                                              
+^TABLE                             = "52error.tab"                            
+                                                                              
+DATA_SET_ID                        = "EAR-A-RDR-3-52COLOR-V2.1"               
+PRODUCT_NAME                       = "52-COLOR ASTEROID SURVEY, ERRORS"       
+PRODUCT_ID                         = "DATA052ERROR_TAB"                       
+INSTRUMENT_HOST_ID                 = "OBS376T3"                               
+INSTRUMENT_HOST_NAME               = "MAUNA KEA OBSERVATORY 3.2-M NASA        
+        INFRARED CASSEGRAIN EQUAT. REFLECTOR (IRTF)"                          
+INSTRUMENT_ID                      = "CVF"                                    
+INSTRUMENT_NAME                    = "CIRCULARLY VARIABLE FILTER"             
+TARGET_NAME                        = "ASTEROID"                               
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = 1983-06-11                               
+STOP_TIME                          = 1987-04-08                               
+PRODUCT_CREATION_TIME              = 2005-01-18  /* File uploaded to OLAF */  
+RECORD_FORMAT                      = "(I5, 1X, A1, 1X, A10, 2X, I5, 2X, I5,   
+        2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X,   
+        I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5,   
+        2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X,   
+        I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5,   
+        2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X,   
+        I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5, 2X, I5)"          
+                                                                              
+OBJECT                             = TABLE                                    
+ ROWS                              = 146                                      
+ ROW_BYTES                         = 384                                      
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 55                                       
+ DESCRIPTION                       = "This file provides the error values     
+        associated with each reflectance value contained in the '52color.tab' 
+        file.  Errors were computed from the standard deviation of the        
+        multiple scans through the CVF.  If only one scan was performed, the  
+        error is left blank.  The null value in this case is -9999.  Note that
+        due to the small number of scans, the errors are often both           
+        underestimated and overestimated.                                     
+        "                                                                     
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "AST_NUMBER"                             
+  DESCRIPTION                      = "Asteroid catalog number"                
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 1                                        
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "SOLAR_ANALOG"                           
+  DESCRIPTION                      = "A code letter indicating which solar    
+        analog star was used in reducing the observation. A = 18 Aquarii B =  
+        16 Cygni B O = 13 Orionis V = 70 Virginis"                            
+  DATA_TYPE                        = "CHARACTER"                              
+  START_BYTE                       = 7                                        
+  BYTES                            = 1                                        
+  FORMAT                           = "A1"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "OBSERVATION_DATE"                       
+  DESCRIPTION                      = "Date of the observations, in the format 
+        YYYY-MM-DD. Not all dates of observation are available.  In           
+        particular, those asteroid observations contributed by R. H. Brown did
+        not include observation dates in the original machine readable data   
+        file. Where no observation date is available, this field contains a   
+        null value."                                                          
+  DATA_TYPE                        = "DATE"                                   
+  START_BYTE                       = 9                                        
+  BYTES                            = 10                                       
+  FORMAT                           = "A10"                                    
+  MISSING_CONSTANT                 = "9999-99-99"                             
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 4                                        
+  NAME                             = "ERROR_08289"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.8289 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 21                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 5                                        
+  NAME                             = "ERROR_08533"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.8533  micron bandpass"                                
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 28                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 6                                        
+  NAME                             = "ERROR_08776"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.8776 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 35                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 7                                        
+  NAME                             = "ERROR_09021"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.9021 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 42                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 8                                        
+  NAME                             = "ERROR_09265"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.9265 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 49                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 9                                        
+  NAME                             = "ERROR_09510"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.9510 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 56                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 10                                       
+  NAME                             = "ERROR_09755"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 0.9755 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 63                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 11                                       
+  NAME                             = "ERROR_10001"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.0001 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 70                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 12                                       
+  NAME                             = "ERROR_10247"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.0247 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 77                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 13                                       
+  NAME                             = "ERROR_10493"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.0493 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 84                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 14                                       
+  NAME                             = "ERROR_10740"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.0740 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 91                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 15                                       
+  NAME                             = "ERROR_10987"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.0987 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 98                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 16                                       
+  NAME                             = "ERROR_11234"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.1234 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 105                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 17                                       
+  NAME                             = "ERROR_11482"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.1482 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 112                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 18                                       
+  NAME                             = "ERROR_11730"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.1730 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 119                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 19                                       
+  NAME                             = "ERROR_11978"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.1978 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 126                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 20                                       
+  NAME                             = "ERROR_12227"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.2227 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 133                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 21                                       
+  NAME                             = "ERROR_12476"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.2476 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 140                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 22                                       
+  NAME                             = "ERROR_12726"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.2726 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 147                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 23                                       
+  NAME                             = "ERROR_12976"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.2976 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 154                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 24                                       
+  NAME                             = "ERROR_13226"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.3226 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 161                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 25                                       
+  NAME                             = "ERROR_13476"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.3476 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 168                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 26                                       
+  NAME                             = "ERROR_13727"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.3727 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 175                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 27                                       
+  NAME                             = "ERROR_13978"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.3978 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 182                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 28                                       
+  NAME                             = "ERROR_14230"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.4230 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 189                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 29                                       
+  NAME                             = "ERROR_14482"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.4482 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 196                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 30                                       
+  NAME                             = "ERROR_14734"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.4734 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 203                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 31                                       
+  NAME                             = "ERROR_14987"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.4987 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 210                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 32                                       
+  NAME                             = "ERROR_15240"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.5240 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 217                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 33                                       
+  NAME                             = "ERROR_15490"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.5490 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 224                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 34                                       
+  NAME                             = "ERROR_15747"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.5747 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 231                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 35                                       
+  NAME                             = "ERROR_16001"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.6001 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 238                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 36                                       
+  NAME                             = "ERROR_14910"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.4910 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 245                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 37                                       
+  NAME                             = "ERROR_15520"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.5520 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 252                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 38                                       
+  NAME                             = "ERROR_16150"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.6150 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 259                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 39                                       
+  NAME                             = "ERROR_16750"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.6750 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 266                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 40                                       
+  NAME                             = "ERROR_17350"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.7350 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 273                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 41                                       
+  NAME                             = "ERROR_17950"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.7950 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 280                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 42                                       
+  NAME                             = "ERROR_18530"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.8530 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 287                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 43                                       
+  NAME                             = "ERROR_19130"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.9130 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 294                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 44                                       
+  NAME                             = "ERROR_19700"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 1.9700 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 301                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 45                                       
+  NAME                             = "ERROR_20280"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.0280 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 308                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 46                                       
+  NAME                             = "ERROR_20840"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.0840 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 315                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 47                                       
+  NAME                             = "ERROR_21400"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.1400 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 322                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 48                                       
+  NAME                             = "ERROR_21960"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.1960 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 329                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 49                                       
+  NAME                             = "ERROR_22520"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.2520 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 336                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 50                                       
+  NAME                             = "ERROR_23060"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.3060 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 343                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 51                                       
+  NAME                             = "ERROR_23610"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.3610 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 350                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 52                                       
+  NAME                             = "ERROR_24140"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.4140 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 357                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 53                                       
+  NAME                             = "ERROR_24660"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.4660 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 364                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 54                                       
+  NAME                             = "ERROR_25190"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.5190 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 371                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 55                                       
+  NAME                             = "ERROR_25700"                            
+  DESCRIPTION                      = "Error (standard deviation of multiple   
+        scans) in the 2.5700 micron bandpass"                                 
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 378                                      
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = TABLE                                    
+END                                                                           

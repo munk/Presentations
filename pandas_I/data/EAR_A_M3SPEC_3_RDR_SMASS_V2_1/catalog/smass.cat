@@ -1,0 +1,490 @@
+PDS_VERSION_ID      = PDS3                                                    
+LABEL_REVISION_NOTE = "                                                       
+  30 Apr 1998, a.c.raugh: Begin label revision history.                       
+   4 Sep 1998, t.l.brown: pulled out reference descriptions,                  
+                          added refkeyids in text.                            
+                          Changed DATA_PROVIDER_FULL_NAME to                  
+                          OBSERVER_FULL_NAME.                                 
+  13 Dec 2000, a.c.raugh: V2.0: Split main file into separate file for        
+                          each spectrum (main file is retained), added        
+                          FILE_NAME column to 'smassndx.tab', cosmetic        
+                          changes to all labels, provided object numbers      
+                          for those objects numbered after the initial        
+                          ingest (retaining original designations).           
+  08 Jun 2003, A.C.Raugh: modified TARGET_NAME values and file names.         
+  "                                                                           
+                                                                              
+OBJECT     = DATA_SET                                                         
+  DATA_SET_ID       = "EAR-A-M3SPEC-3-RDR-SMASS-V2.1"                         
+  DATA_SET_LOCAL_ID = "SMASS"                                                 
+                                                                              
+  OBJECT     = DATA_SET_INFORMATION                                           
+    DATA_SET_NAME                  = "SMASS ASTEROID SURVEY V2.1"             
+    DATA_SET_TERSE_DESC            = "Small Main-Belt Asteroid                
+      Spectrographic Survey over the visual range"                            
+    ARCHIVE_STATUS                 = "LOCALLY_ARCHIVED"                       
+    DATA_SET_COLLECTION_MEMBER_FLG = "N"                                      
+    DATA_OBJECT_TYPE               = TABLE                                    
+    START_TIME                     = 1990                                     
+    STOP_TIME                      = 1994                                     
+    DATA_SET_RELEASE_DATE          = 1996-03-29  /* Peer Review Date */       
+    PRODUCER_FULL_NAME             = "David J. Tholen"                        
+    OBSERVER_FULL_NAME             = "Richard P. Binzel"                      
+    DATA_SET_UPDATE_PERIOD         = 2.0                                      
+    DETAILED_CATALOG_FLAG          = "N"                                      
+    DATA_SET_DESC                  = "                                        
+                                                                              
+      Data Set Overview                                                       
+      =================                                                       
+      The Small Main-belt Asteroid Spectrographic Survey (SMASS) was          
+      initiated in 1990 with the goal of obtaining spectra over the           
+      visual wavelength region for a substantial number of small (D < 20      
+      km) main-belt asteroids.  Observations were primarily made using        
+      the 2.4 m Hiltner telescope, located at the Michigan-Dartmouth-MIT      
+      (MDM) Observatory on the southwest ridge of Kitt Peak in Arizona.       
+                                                                              
+      The Mark III spectrograph, equipped with a TI 4849 CCD (398 x 598       
+      pixels) was used with a low resolution grism (150 line/mm, blazed       
+      at 7300 A) to cover the wavelength range from 4000 to 10000 A in a      
+      single exposure, with a dispersion of ~10 A/pixel.  A Wratten 12        
+      filter (cutoff < 6000 A) was placed over one-half of the CCD dewar      
+      window (the red spectral half) in order to block the second order       
+      spectral image.  This setup has the ability to image the entire         
+      spectrum in a single exposure and has many advantages over piecing      
+      together the different spectral regions from separate images.  In       
+      particular, the effects resulting from the asteroid's rotational        
+      lightcurve can be neglected when the entire spectral range is           
+      imaged simultaneously.                                                  
+                                                                              
+      While the typical seeing at MDM gives images with a FWHM of less        
+      than or equal to 2 arcsec, a 4.7 arcsec wide slit, oriented in the      
+      N-S direction, was regularly used.  This slit width results in a        
+      spectral resolution of abut 50 A.                                       
+                                                                              
+      A total of 316 asteroids were included in the survey.  The data         
+      have been published in Xu, et al. (Icarus 115, 1-35, 1995)              
+      [XUETAL1995].  SMASS is an ongoing survey and data will be added to     
+      this archive yearly as they are published.                              
+                                                                              
+                                                                              
+      Parameters                                                              
+      ==========                                                              
+      The parameters included for each asteroid are scaled reflectance as     
+      a function of wavelength (in SMASS.TAB), and the first and second       
+      principal components of the principal component analysis carried        
+      out on the reflectance spectra (in SMASSPC.TAB).                        
+                                                                              
+                                                                              
+      Data                                                                    
+      ====                                                                    
+      The scaled reflectances as a function of wavelength are in the file     
+      SMASS.TAB.  The data on the 316 different asteroids are                 
+      concatenated in this file.  SMASSNDX.TAB is an index to the data        
+      table, and gives the starting record, ending record, and number of      
+      records in SMASS.TAB for each asteroid spectrum.  SMASSPC.TAB gives     
+      the first and second principal components for each of 315 of the        
+      asteroids, 5145 Pholus having been omitted from the principal           
+      component analysis.                                                     
+                                                                              
+                                                                              
+      Ancillary Data                                                          
+      ==============                                                          
+      Principal component analysis was carried out for 315 of the             
+      asteroid spectra (asteroid 5145 Pholus was omitted from the             
+      analysis due to its very unusual spectrum).  SMASSPC.TAB gives the      
+      first and second principal components for each of the 315               
+      asteroids.  For information on the principal component analysis         
+      technique, see [CHATFIELDETAL1980].  The eigenvectors for the           
+      first two principal components are tabulated in SMASSEIG.TAB.           
+                                                                              
+      The principal components PC1 and PC2 for each asteroid are              
+      calculated from the observed reflectances (normalized to unity at       
+      5500 A), at 50 equally spaced wavelengths from 4800 - 9700 A.  At       
+      the ith wavelength:                                                     
+                                                                              
+      lambda(i) = Wavelength                                                  
+          E1(i) = ith Eigenvector coefficient for PC1                         
+          E2(i) = ith Eigenvector coefficient for PC2                         
+           R(i) = Asteroid reflectance at lambda(i)                           
+                  (normalized to unity at 5500A)                              
+           m(i) = mean value of R(i) for the entire set of asteroid           
+                  spectra                                                     
+           s(i) = standard deviation of R(i) for the entire set of            
+                  asteroid spectra                                            
+                                                                              
+      PC1 and PC2 are calculated as follows:                                  
+                                                                              
+                 50                                                           
+           PC1 = SUM E1(i)*{[R(i)-m(i)]/s(i)}                                 
+                 i=1                                                          
+                                                                              
+                 50                                                           
+           PC2 = SUM E2(i)*{[R(i)-m(i)]/s(i)}                                 
+                 i=1                                                          
+                                                                              
+       (where 'SUM' represents the standard mathematical summation            
+       notation)                                                              
+                                                                              
+      Modification History                                                    
+      ====================                                                    
+                                                                              
+      For Version 2.0, separate spectra files for each asteroid were created  
+      by extracting the appropriate lines from the 'smass.tab' main data      
+      file, trimming off the object identification, and providing individual  
+      labels. The original data files were updated slightly to include        
+      catalog numbers for those asteroids which received numbers after        
+      the data were published. Data were not re-sorted for these numbers,     
+      however, which all occur at the end of the file. The provisional        
+      designations used to identify objects in the original data file have    
+      been retained for cross-reference.                                      
+                                                                              
+      "                                                                       
+                                                                              
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+      Confidence Level Overview                                               
+      =========================                                               
+      The user is referred to the paper in which these data were              
+      published: Xu, et al. (1995) [XUETAL1995] for information about the     
+      confidence level of the data.                                           
+                                                                              
+                                                                              
+      Review                                                                  
+      ======                                                                  
+      This data set underwent external peer review on Mar. 29, 1996."         
+                                                                              
+  END_OBJECT = DATA_SET_INFORMATION                                           
+                                                                              
+  OBJECT     = DATA_SET_HOST                                                  
+    INSTRUMENT_HOST_ID = "MDM"                                                
+    INSTRUMENT_ID      = "M3SPEC"                                             
+  END_OBJECT = DATA_SET_HOST                                                  
+                                                                              
+  OBJECT     = DATA_SET_REFERENCE_INFORMATION                                 
+    REFERENCE_KEY_ID = { "XUETAL1995",                                        
+                         "CHATFIELDETAL1980" }                                
+  END_OBJECT = DATA_SET_REFERENCE_INFORMATION                                 
+                                                                              
+  OBJECT     = DATA_SET_TARGET                                                
+    TARGET_NAME = { "10 HYGIEA",                                              
+                    "1063 AQUILEGIA",                                         
+                    "1071 BRITA",                                             
+                    "1084 TAMARIWA",                                          
+                    "11066",                                                  
+                    "111 ATE",                                                
+                    "1110 JAROSLAWA",                                         
+                    "1143 ODYSSEUS",                                          
+                    "1144 ODA",                                               
+                    "1145 ROBELMONTE",                                        
+                    "116 SIRONA",                                             
+                    "1165 IMPRINETTA",                                        
+                    "1166 SAKUNTALA",                                         
+                    "1198 ATLANTIS",                                          
+                    "124 ALKESTE",                                            
+                    "1257 MORA",                                              
+                    "126 VELLEDA",                                            
+                    "1264 LETABA",                                            
+                    "1273 HELMA",                                             
+                    "1279 UGANDA",                                            
+                    "128 NEMESIS",                                            
+                    "1289 KUTAISSI",                                          
+                    "1302 WERRA",                                             
+                    "131 VALA",                                               
+                    "1325 INANDA",                                            
+                    "134 SOPHROSYNE",                                         
+                    "1358 GAIKA",                                             
+                    "137 MELIBOEA",                                           
+                    "1375 ALFREDA",                                           
+                    "1379 LOMONOSOWA",                                        
+                    "138 TOLOSA",                                             
+                    "1393 SOFALA",                                            
+                    "14 IRENE",                                               
+                    "1451 GRANO",                                             
+                    "1463 NORDENMARKIA",                                      
+                    "1471 TORNIO",                                            
+                    "1478 VIHURI",                                            
+                    "1480 AUNUS",                                             
+                    "149 MEDUSA",                                             
+                    "1501 BAADE",                                             
+                    "1518 ROVANIEMI",                                         
+                    "1534 NASI",                                              
+                    "157 DEJANIRA",                                           
+                    "1577 REISS",                                             
+                    "158 KORONIS",                                            
+                    "1584 FUJI",                                              
+                    "1607 MAVIS",                                             
+                    "1626 SADEYA",                                            
+                    "1628 STROBEL",                                           
+                    "1646 ROSSELAND",                                         
+                    "1651 BEHRENS",                                           
+                    "1653 YAKHONTOVIA",                                       
+                    "1658 INNES",                                             
+                    "167 URDA",                                               
+                    "1679 NEVANLINNA",                                        
+                    "169 ZELIA",                                              
+                    "1697 KOSKENNIEMI",                                       
+                    "1712 ANGOLA",                                            
+                    "1722 GOFFIN",                                            
+                    "1725 CRAO",                                              
+                    "1743 SCHMIDT",                                           
+                    "1749 TELAMON",                                           
+                    "1772 GAGARIN",                                           
+                    "1781 VAN BIESBROECK",                                    
+                    "18 MELPOMENE",                                           
+                    "1807 SLOVAKIA",                                          
+                    "185 EUNIKE",                                             
+                    "1854 SKVORTSOV",                                         
+                    "186 CELUTA",                                             
+                    "1892 LUCIENNE",                                          
+                    "1906 NAEF",                                              
+                    "1907 RUDNEVA",                                           
+                    "1929 KOLLAA",                                            
+                    "1933 TINCHEN",                                           
+                    "1934 JEFFERS",                                           
+                    "196 PHILOMELA",                                          
+                    "1967 MENZEL",                                            
+                    "1991 XB",                                                
+                    "1992 NA",                                                
+                    "1992 UB",                                                
+                    "1995 HAJEK",                                             
+                    "2011 VETERANIYA",                                        
+                    "2014 VASILEVSKIS",                                       
+                    "2017 WESSON",                                            
+                    "2024 MCLAUGHLIN",                                        
+                    "204 KALLISTO",                                           
+                    "2060 CHIRON",                                            
+                    "2070 HUMASON",                                           
+                    "2074 SHOEMAKER",                                         
+                    "2078 NANKING",                                           
+                    "2091 SAMPO",                                             
+                    "2098 ZYSKIN",                                            
+                    "2105 GUDY",                                              
+                    "2107 ILMARI",                                            
+                    "211 ISOLDA",                                             
+                    "2113 EHRDNI",                                            
+                    "2119 SCHWALL",                                           
+                    "2128 WETHERILL",                                         
+                    "2130 EVDOKIYA",                                          
+                    "2140 KEMEROVO",                                          
+                    "2143 JIMARNOLD",                                         
+                    "2149 SCHWAMBRANIYA",                                     
+                    "2159 KUKKAMAKI",                                         
+                    "2174 ASMODEUS",                                          
+                    "218 BIANCA",                                             
+                    "22 KALLIOPE",                                            
+                    "2204 LYYLI",                                             
+                    "221 EOS",                                                
+                    "2215 SICHUAN",                                           
+                    "2253 ESPINETTE",                                         
+                    "2259 SOFIEVKA",                                          
+                    "2299 HANKO",                                             
+                    "230 ATHAMANTIS",                                         
+                    "231 VINDOBONA",                                          
+                    "2327 GERSHBERG",                                         
+                    "234 BARBARA",                                            
+                    "235 CAROLINA",                                           
+                    "2365 INTERKOSMOS",                                       
+                    "237 COELESTINA",                                         
+                    "239 ADRASTEA",                                           
+                    "2403 SUMAVA",                                            
+                    "2420 CIURLIONIS",                                        
+                    "243 IDA",                                                
+                    "2440 EDUCATIO",                                          
+                    "2442 CORBETT",                                           
+                    "2444 LEDERLE",                                           
+                    "245 VERA",                                               
+                    "248 LAMEIA",                                             
+                    "25 PHOCAEA",                                             
+                    "2503 LIAONING",                                          
+                    "2538 VANDERLINDEN",                                      
+                    "2558 VIV",                                               
+                    "256 WALPURGA",                                           
+                    "2590 MOURAO",                                            
+                    "2599 VESELI",                                            
+                    "2645 DAPHNE PLANE",                                      
+                    "2728 YATSKIV",                                           
+                    "2775 ODISHAW",                                           
+                    "2790 NEEDHAM",                                           
+                    "28 BELLONA",                                             
+                    "287 NEPHTHYS",                                           
+                    "289 NENETTA",                                            
+                    "29 AMPHITRITE",                                          
+                    "290 BRUNA",                                              
+                    "2908 SHIMOYAMA",                                         
+                    "291 ALICE",                                              
+                    "292 LUDOVICA",                                           
+                    "2920 AUTOMEDON",                                         
+                    "2923 SCHUYLER",                                          
+                    "2946 MUCHACHOS",                                         
+                    "2965 SURIKOV",                                           
+                    "2966 KORSUNIA",                                          
+                    "297 CAECILIA",                                           
+                    "3 JUNO",                                                 
+                    "3109 MACHIN",                                            
+                    "314 ROSALIA",                                            
+                    "3153 LINCOLN",                                           
+                    "3155 LEE",                                               
+                    "3158 ANGA",                                              
+                    "3167 BABCOCK",                                           
+                    "319 LEONA",                                              
+                    "32 POMONA",                                              
+                    "3220 MURAYAMA",                                          
+                    "3231 MILA",                                              
+                    "3268 DE SANCTIS",                                        
+                    "3285 RUTH WOLFE",                                        
+                    "3321 DASHA",                                             
+                    "3332 RAKSHA",                                            
+                    "3354 MCNAIR",                                            
+                    "3381 MIKKOLA",                                           
+                    "339 DOROTHEA",                                           
+                    "3431 NAKANO",                                            
+                    "345 TERCIDINA",                                          
+                    "346 HERMENTARIA",                                        
+                    "349 DEMBOWSKA",                                          
+                    "3494 PURPLE MOUNTAIN",                                   
+                    "350 ORNAMENTA",                                          
+                    "3501 OLEGIYA",                                           
+                    "3523 ARINA",                                             
+                    "3528 COUNSELMAN",                                        
+                    "354 ELEONORA",                                           
+                    "3559 VIOLAUMAYER",                                       
+                    "3578 CARESTIA",                                          
+                    "3586 VASNETSOV",                                         
+                    "36 ATALANTE",                                            
+                    "3628 BOZNEMCOVA",                                        
+                    "3657 ERMOLOVA",                                          
+                    "3665 FITZGERALD",                                        
+                    "3674 ERBISBUHL",                                         
+                    "3677 MAGNUSSON",                                         
+                    "371 BOHEMIA",                                            
+                    "374 BURGUNDIA",                                          
+                    "3740 MENGE",                                             
+                    "3748 TATUM",                                             
+                    "3759 PIIRONEN",                                          
+                    "3760 POUTANEN",                                          
+                    "3792 PRESTON",                                           
+                    "38 LEDA",                                                
+                    "384 BURDIGALA",                                          
+                    "3869 NORTON",                                            
+                    "39 LAETITIA",                                            
+                    "3915 FUKUSHIMA",                                         
+                    "3935 TOATENMONGAKKAI",                                   
+                    "3944 HALLIDAY",                                          
+                    "3963 PARADZHANOV",                                       
+                    "3968 KOPTELOV",                                          
+                    "3999 ARISTARCHUS",                                       
+                    "4 VESTA",                                                
+                    "4002 SHINAGAWA",                                         
+                    "4005 DYAGILEV",                                          
+                    "4006 SANDLER",                                           
+                    "402 CHLOE",                                              
+                    "4025 RIDLEY",                                            
+                    "4031 MUELLER",                                           
+                    "4038 KRISTINA",                                          
+                    "4062 SCHIAPARELLI",                                      
+                    "4085 WEIR",                                              
+                    "4104 ALU",                                               
+                    "4145 MAXIMOVA",                                          
+                    "4147 LENNON",                                            
+                    "4156",                                                   
+                    "4159 FREEMAN",                                           
+                    "416 VATICANA",                                           
+                    "4165 DIDKOVSKIJ",                                        
+                    "4179 TOUTATIS",                                          
+                    "42 ISIS",                                                
+                    "4215 KAMO",                                              
+                    "4219 NAKAMURA",                                          
+                    "4282 ENDATE",                                            
+                    "43 ARIADNE",                                             
+                    "430 HYBRIS",                                             
+                    "4353 ONIZAKI",                                           
+                    "4370 DICKENS",                                           
+                    "4373 CRESPO",                                            
+                    "4376 SHIGEMORI",                                         
+                    "441 BATHILDE",                                           
+                    "4440 TCHANTCHES",                                        
+                    "446 AETERNITAS",                                         
+                    "4510 SHAWNA",                                            
+                    "4546 FRANCK",                                            
+                    "456 ABNOBA",                                             
+                    "4562",                                                   
+                    "4606 SAHEKI",                                            
+                    "4635 RIMBAUD",                                           
+                    "4640 HARA",                                              
+                    "467 LAURA",                                              
+                    "4673 BORTLE",                                            
+                    "470 KILIA",                                              
+                    "471 PAPAGENA",                                           
+                    "474 PRUDENTIA",                                          
+                    "4761 URRUTIA",                                           
+                    "477 ITALIA",                                             
+                    "480 HANSA",                                              
+                    "481 EMITA",                                              
+                    "4939",                                                   
+                    "4948",                                                   
+                    "495 EULALIA",                                            
+                    "4956 NOYMER",                                            
+                    "5065 JOHNSTONE",                                         
+                    "509 IOLANDA",                                            
+                    "511 DAVIDA",                                             
+                    "5118 ELNAPOUL",                                          
+                    "512 TAURINENSIS",                                        
+                    "5143 HERACLES",                                          
+                    "5145 PHOLUS",                                            
+                    "518 HALAWE",                                             
+                    "519 SYLVANIA",                                           
+                    "529 PREZIOSA",                                           
+                    "53 KALYPSO",                                             
+                    "54 ALEXANDRA",                                           
+                    "541 DEBORAH",                                            
+                    "55 PANDORA",                                             
+                    "550 SENTA",                                              
+                    "563 SULEIKA",                                            
+                    "582 OLYMPIA",                                            
+                    "599 LUISA",                                              
+                    "6 HEBE",                                                 
+                    "61 DANAE",                                               
+                    "631 PHILIPPINA",                                         
+                    "639 LATONA",                                             
+                    "653 BERENIKE",                                           
+                    "675 LUDMILLA",                                           
+                    "68 LETO",                                                
+                    "683 LANZIA",                                             
+                    "7 IRIS",                                                 
+                    "702 ALAUDA",                                             
+                    "71 NIOBE",                                               
+                    "72 FERONIA",                                             
+                    "720 BOHLINIA",                                           
+                    "722 FRIEDA",                                             
+                    "724 HAPAG",                                              
+                    "73 KLYTIA",                                              
+                    "732 TJILAKI",                                            
+                    "7341",                                                   
+                    "737 AREQUIPA",                                           
+                    "7474",                                                   
+                    "752 SULAMITIS",                                          
+                    "774 ARMOR",                                              
+                    "787 MOSKVA",                                             
+                    "788 HOHENSTEINA",                                        
+                    "8 FLORA",                                                
+                    "803 PICKA",                                              
+                    "808 MERXIA",                                             
+                    "811 NAUHEIMA",                                           
+                    "813 BAUMEIA",                                            
+                    "8176",                                                   
+                    "82 ALKMENE",                                             
+                    "851 ZEISSIA",                                            
+                    "86 SEMELE",                                              
+                    "863 BENKOELA",                                           
+                    "879 RICARDA",                                            
+                    "88 THISBE",                                              
+                    "900 ROSALINDE",                                          
+                    "915 COSETTE",                                            
+                    "918 ITHA",                                               
+                    "951 GASPRA",                                             
+                    "ASTEROID" }                                              
+  END_OBJECT = DATA_SET_TARGET                                                
+                                                                              
+END_OBJECT = DATA_SET                                                         
+                                                                              
+END                                                                           

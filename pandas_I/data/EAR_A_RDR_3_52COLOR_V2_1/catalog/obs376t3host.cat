@@ -1,0 +1,47 @@
+PDS_VERSION_ID                     = PDS3                                     
+  LABEL_REVISION_NOTE              = "FEB 2002:  Initial information from     
+        [LUKAC&MILLER2000] uploaded into OLAF (SBN)."                         
+                                                                              
+OBJECT                             = INSTRUMENT_HOST                          
+  INSTRUMENT_HOST_ID               = "OBS376T3"                               
+  OBJECT                           = INSTRUMENT_HOST_INFORMATION              
+    INSTRUMENT_HOST_NAME           = "MAUNA KEA OBSERVATORY 3.2-M NASA        
+        INFRARED CASSEGRAIN EQUAT. REFLECTOR (IRTF)"                          
+    INSTRUMENT_HOST_TYPE           = "EARTH BASED"                            
+    INSTRUMENT_HOST_DESC           = "                                        
+                                                                              
+                                                                              
+  Instrument Host Overview                                                    
+  ========================                                                    
+     05/1979+; NASA telescope                                                 
+                                                                              
+          GROUP                  = OBSERVATORY_PARAMETERS                     
+            OBSERVATORY_ID       = 'OBS376'                                   
+            NAME                 = 'MAUNA KEA OBSERVATORY'                    
+            COUNTRY              = 'USA'                                      
+            ADDRESS              = 'UNIVERSITY OF HAWAII\N                    
+                                          INSTITUTE FOR ASTRONOMY\N           
+                                          2680 WOODLAWN DRIVE\N               
+                                          HONOLULU, OAHU, HAWAII'             
+          END_GROUP              = OBSERVATORY_PARAMETERS                     
+                                                                              
+          GROUP                  = TELESCOPE_PARAMETERS                       
+            TELESCOPE_ID         = 'T3'                                       
+            NAME                 = '3.2-M NASA INFRARED CASSEGRAIN EQUAT.     
+    REFLECTOR (IRTF)'                                                         
+            APERTURE             = 3.2 <METERS>                               
+            LONGITUDE            = -154.528000 /* -154 31 40.80 */            
+            LATITUDE             =   19.826223 /* +19 49 34.4 */              
+            ALTITUDE             = 4168 <METERS>                              
+            COORDINATE_SOURCE    = 'Aerial survey - North American (1983)     
+    datum'                                                                    
+          END_GROUP              = TELESCOPE_PARAMETERS"                      
+                                                                              
+  END_OBJECT                       = INSTRUMENT_HOST_INFORMATION              
+                                                                              
+  OBJECT                           = INSTRUMENT_HOST_REFERENCE_INFO           
+    REFERENCE_KEY_ID               = "N/A"                                    
+  END_OBJECT                       = INSTRUMENT_HOST_REFERENCE_INFO           
+                                                                              
+END_OBJECT                         = INSTRUMENT_HOST                          
+END                                                                           

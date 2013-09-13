@@ -1,0 +1,77 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 16                                       
+FILE_RECORDS                       = 52                                       
+                                                                              
+^TABLE                             = "52waves2.tab"                           
+                                                                              
+DATA_SET_ID                        = "EAR-A-RDR-3-52COLOR-V2.1"               
+PRODUCT_NAME                       = "52-COLOR ASTEROID SURVEY, WAVELENGTHS 2"
+PRODUCT_ID                         = "DATA052WAVES2_TAB"                      
+INSTRUMENT_HOST_ID                 = "OBS376T3"                               
+INSTRUMENT_HOST_NAME               = "MAUNA KEA OBSERVATORY 3.2-M NASA        
+        INFRARED CASSEGRAIN EQUAT. REFLECTOR (IRTF)"                          
+INSTRUMENT_ID                      = "CVF"                                    
+INSTRUMENT_NAME                    = "CIRCULARLY VARIABLE FILTER"             
+TARGET_NAME                        = "ASTEROID"                               
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = 1983-06-11                               
+STOP_TIME                          = 1987-04-08                               
+PRODUCT_CREATION_TIME              = 2005-01-18  /* File uploaded to OLAF */  
+RECORD_FORMAT                      = "(I2, 1X, F6.4, 1X, F3.1)"               
+                                                                              
+OBJECT                             = TABLE                                    
+ ROWS                              = 52                                       
+ ROW_BYTES                         = 16                                       
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 3                                        
+ DESCRIPTION                       = "This file contains the effective        
+        wavelength table for filters used in the 52-color asteroid survey. The
+        observations were made using a double CVF (circularly variable        
+        filter). The short wavelength portion of the CVF covered the octave   
+        from 0.8 to 1.6 microns with 3 percent resolution, while the long     
+        wavelength portion covered 1.5    to 2.6 microns with 5 percent       
+        resolution.  There is some overlap in the spectral coverage between   
+        1.5 and 1.6 microns, which is evident as a discontinuity in the       
+        wavelengths after the first 32 positions, which were obtained with the
+        short wavelength portion, while the remaining 20 values were obtained 
+        with the long wavelength portion.                                     
+                                                                              
+        "                                                                     
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "BANDPASS_NUMBER"                        
+  DESCRIPTION                      = "Identifying number of the bandpass"     
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 1                                        
+  BYTES                            = 2                                        
+  FORMAT                           = "I2"                                     
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "WAVELENGTH"                             
+  DESCRIPTION                      = "Central wavelength of the bandpass"     
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 4                                        
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "FWHM"                                   
+  DESCRIPTION                      = "Full width at half maximum of the       
+        bandpass"                                                             
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 11                                       
+  BYTES                            = 3                                        
+  FORMAT                           = "F3.1"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = TABLE                                    
+END                                                                           

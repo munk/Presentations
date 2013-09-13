@@ -1,0 +1,82 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 26                                       
+FILE_RECORDS                       = 52                                       
+                                                                              
+^TABLE                             = "44nysa1.tab"                            
+                                                                              
+DATA_SET_ID                        = "EAR-A-RDR-3-52COLOR-V2.1"               
+PRODUCT_NAME                       = "44NYSA1"                                
+PRODUCT_ID                         = "44NYSA1_TAB"                            
+INSTRUMENT_HOST_ID                 = "OBS376T3"                               
+INSTRUMENT_HOST_NAME               = "MAUNA KEA OBSERVATORY 3.2-M NASA        
+        INFRARED CASSEGRAIN EQUAT. REFLECTOR (IRTF)"                          
+INSTRUMENT_ID                      = "CVF"                                    
+INSTRUMENT_NAME                    = "CIRCULARLY VARIABLE FILTER"             
+TARGET_NAME                        = "44 NYSA"                                
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = "N/A"                                    
+STOP_TIME                          = "N/A"                                    
+PRODUCT_CREATION_TIME              = 2005-01-20  /* File uploaded to OLAF */  
+RECORD_FORMAT                      = "(F6.4, 1X, F3.1, 1X, F7.4, 1X, I5)"     
+                                                                              
+OBJECT                             = TABLE                                    
+ ROWS                              = 52                                       
+ ROW_BYTES                         = 26                                       
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 4                                        
+ DESCRIPTION                       = "This table contains a 52-color IR       
+        spectrum of the asteroid specified in TARGET_NAME.                    
+        "                                                                     
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "WAVELENGTH"                             
+  DESCRIPTION                      = "Central bandpass of the filter"         
+  UNIT                             = "MICROMETER"                             
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 1                                        
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "FWHM"                                   
+  DESCRIPTION                      = "Full width at half maximum of the       
+        bandpass"                                                             
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 8                                        
+  BYTES                            = 3                                        
+  FORMAT                           = "F3.1"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "REFLECTANCE"                            
+  DESCRIPTION                      = "Reflectance in the given bandpass"      
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 12                                       
+  BYTES                            = 7                                        
+  FORMAT                           = "F7.4"                                   
+  MISSING_CONSTANT                 = -0.9999                                  
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 4                                        
+  NAME                             = "ERROR"                                  
+  DESCRIPTION                      = "The standard deviation of the multiple  
+        scans through the CVF. No errors are given for single-scan            
+        reflectances. Note that due to the small number of scans, errors are  
+        often both underestimated and overestimated."                         
+  DATA_TYPE                        = "ASCII_INTEGER"                          
+  START_BYTE                       = 20                                       
+  BYTES                            = 5                                        
+  FORMAT                           = "I5"                                     
+  MISSING_CONSTANT                 = -9999                                    
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = TABLE                                    
+END                                                                           

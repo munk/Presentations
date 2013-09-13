@@ -1,0 +1,20 @@
+PDS_VERSION_ID = PDS3                                                         
+                                                                              
+LABEL_REVISION_NOTE                = "2000 Feb 25, C. L. Neese   First draft  
+        from available information                                            
+        04 Feb 2002, A.C.Raugh     Changed target name to avoid ambiguity"    
+                                                                              
+OBJECT     = TARGET                                                           
+  TARGET_NAME = "4 VESTA"                                                     
+                                                                              
+  OBJECT     = TARGET_INFORMATION                                             
+    TARGET_TYPE        = "ASTEROID"                                           
+    ORBIT_DIRECTION    = "PROGRADE"                                           
+    PRIMARY_BODY_NAME  = "SUN"                                                
+    ROTATION_DIRECTION = "UNK"                                                
+    TARGET_DESC        = "ASTEROID"                                           
+  END_OBJECT = TARGET_INFORMATION                                             
+                                                                              
+END_OBJECT = TARGET                                                           
+                                                                              
+END                                                                           

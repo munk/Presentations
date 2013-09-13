@@ -1,0 +1,25 @@
+PDS_VERSION_ID   = PDS3                                                       
+                                                                              
+OBJECT     = REFERENCE                                                        
+  REFERENCE_KEY_ID     = "BUGAYEVSKIY&SNYD1995"                               
+  REFERENCE_DESC       = "Bugayevskiy, L. M., and Snyder, J. P., 1995, Map    
+        projections: A reference manual, Taylor & Francis, London and Bristol,
+        Pennsylvania, 328 pp."                                                
+END_OBJECT = REFERENCE                                                        
+                                                                              
+OBJECT     = REFERENCE                                                        
+  REFERENCE_KEY_ID     = "CRUIKSHANK&HARTM1984"                               
+  REFERENCE_DESC       = "Cruikshank, D.P., and W.K. Hartmann, The            
+        meteorite-asteroid connection: Two olivine-rich asteroids, Science    
+        223, 281-283, 1984."                                                  
+END_OBJECT = REFERENCE                                                        
+                                                                              
+OBJECT     = REFERENCE                                                        
+  REFERENCE_KEY_ID     = "LUKAC&MILLER2000"                                   
+  REFERENCE_DESC       = "Lukac, M. R., and R. J. Miller. List of Active      
+        Professional Observatories. United States Naval Observatory Circular  
+        No. 178. Washington DC, 2000.                                         
+        "                                                                     
+END_OBJECT = REFERENCE                                                        
+                                                                              
+END                                                                           

@@ -1,0 +1,35 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = STREAM                                   
+                                                                              
+OBJECT                             = TEXT                                     
+   PUBLICATION_DATE                = 2005-01-20  /*Label Last Generated*/     
+   NOTE                            = "Description of the contents of the      
+        catalog directory."                                                   
+END_OBJECT                         = TEXT                                     
+END                                                                           
+                                                                              
+                                                                              
+This directory contains the PDS catalog files for this data set. Instrument   
+host file names end in "HOST.CAT". Instrument file names in "INST.CAT".       
+Target catalog files are located in the TARGET... sub-directories. The targets
+files are divided into these directories so that a single folder will not     
+contain more than 100 files, and they are sorted so that the first folder     
+contains the alphabetically first file and the last folder the alphabetically 
+last file.                                                                    
+                                                                              
+                   catalog Directory Contents                                 
+                                                                              
+catinfo.txt - The file you are reading.                                       
+                                                                              
+dataset.cat - the catalog file for the data set "52-color Asteroid Survey".   
+                                                                              
+cvfinst.cat - the catalog file for the instrument "Circularly Variable        
+        Filter".                                                              
+                                                                              
+mission.cat - the catalog file for the mission "SUPPORT ARCHIVES"             
+                                                                              
+obs376t3host.cat - the catalog file for the instrument host "Mauna Kea        
+        Observatory 3.2-m NASA infrared Cassegrain equat. reflector (IRTF)".  
+                                                                              
+references_list.cat - contains all the references used on the data set and its
+        products.                                                             

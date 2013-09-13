@@ -1,0 +1,622 @@
+PDS_VERSION_ID                     = PDS3                                     
+                                                                              
+RECORD_TYPE                        = "FIXED_LENGTH"                           
+RECORD_BYTES                       = 376                                      
+FILE_RECORDS                       = 1                                        
+                                                                              
+^TABLE                             = "52waves.tab"                            
+                                                                              
+DATA_SET_ID                        = "EAR-A-RDR-3-52COLOR-V2.1"               
+PRODUCT_NAME                       = "52-COLOR ASTEROID SURVEY, WAVELENGTHS 1"
+PRODUCT_ID                         = "DATA052WAVES_TAB"                       
+INSTRUMENT_HOST_ID                 = "N/A"                                    
+INSTRUMENT_HOST_NAME               = "N/A"                                    
+INSTRUMENT_ID                      = "N/A"                                    
+INSTRUMENT_NAME                    = "N/A"                                    
+TARGET_NAME                        = "ASTEROID"                               
+TARGET_TYPE                        = "ASTEROID"                               
+START_TIME                         = 1983-06-11                               
+STOP_TIME                          = 1987-04-08                               
+PRODUCT_CREATION_TIME              = 2005-01-18  /* File uploaded to OLAF */  
+RECORD_FORMAT                      = "(F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X,
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, 
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, 
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, 
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, 
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, 
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, 
+        F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4, 1X, F6.4)"              
+                                                                              
+OBJECT                             = TABLE                                    
+ ROWS                              = 1                                        
+ ROW_BYTES                         = 376                                      
+ INTERCHANGE_FORMAT                = "ASCII"                                  
+ COLUMNS                           = 52                                       
+ DESCRIPTION                       = "This file lists the effective           
+        wavelengths used in the 52-color asteroid survey.  The observations   
+        were made using a double CVF (circularly variable filter). The short  
+        wavelength portion of the CVF  covered the octave from 0.8 to 1.6     
+        microns with 3 percent resolution, while the long wavelength portion  
+        covered 1.5 to 2.6 microns with 5 percent resolution.  There is some  
+        overlap in the spectral coverage between 1.5 and 1.6 microns, which is
+        evident as a discontinuity in the wavelengths after the first 32      
+        positions, which were obtained with the short wavelength portion,     
+        while the remaining 20 values were obtained with the long wavelength  
+        portion.                                                              
+                                                                              
+        "                                                                     
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 1                                        
+  NAME                             = "EFF_WL_01"                              
+  DESCRIPTION                      = "Effective wavelength of 1st bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 12                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 2                                        
+  NAME                             = "EFF_WL_02"                              
+  DESCRIPTION                      = "Effective wavelength of 2nd bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 19                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 3                                        
+  NAME                             = "EFF_WL_03"                              
+  DESCRIPTION                      = "Effective wavelength of 3rd bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 26                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 4                                        
+  NAME                             = "EFF_WL_04"                              
+  DESCRIPTION                      = "Effective wavelength of 4th bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 33                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 5                                        
+  NAME                             = "EFF_WL_05"                              
+  DESCRIPTION                      = "Effective wavelength of 5th bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 40                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 6                                        
+  NAME                             = "EFF_WL_06"                              
+  DESCRIPTION                      = "Effective wavelength of 6th bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 47                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 7                                        
+  NAME                             = "EFF_WL_07"                              
+  DESCRIPTION                      = "Effective wavelength of 7th bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 54                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 8                                        
+  NAME                             = "EFF_WL_08"                              
+  DESCRIPTION                      = "Effective wavelength of 8th bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 61                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 9                                        
+  NAME                             = "EFF_WL_09"                              
+  DESCRIPTION                      = "Effective wavelength of 9th bandpass"   
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 68                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 10                                       
+  NAME                             = "EFF_WL_10"                              
+  DESCRIPTION                      = "Effective wavelength of 10th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 75                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 11                                       
+  NAME                             = "EFF_WL_11"                              
+  DESCRIPTION                      = "Effective wavelength of 11th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 82                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 12                                       
+  NAME                             = "EFF_WL_12"                              
+  DESCRIPTION                      = "Effective wavelength of 12th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 89                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 13                                       
+  NAME                             = "EFF_WL_13"                              
+  DESCRIPTION                      = "Effective wavelength of 13th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 96                                       
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 14                                       
+  NAME                             = "EFF_WL_14"                              
+  DESCRIPTION                      = "Effective wavelength of 14th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 103                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 15                                       
+  NAME                             = "EFF_WL_15"                              
+  DESCRIPTION                      = "Effective wavelength of 15th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 110                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 16                                       
+  NAME                             = "EFF_WL_16"                              
+  DESCRIPTION                      = "Effective wavelength of 16th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 117                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 17                                       
+  NAME                             = "EFF_WL_17"                              
+  DESCRIPTION                      = "Effective wavelength of 17th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 124                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 18                                       
+  NAME                             = "EFF_WL_18"                              
+  DESCRIPTION                      = "Effective wavelength of 18th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 131                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 19                                       
+  NAME                             = "EFF_WL_19"                              
+  DESCRIPTION                      = "Effective wavelength of 19th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 138                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 20                                       
+  NAME                             = "EFF_WL_20"                              
+  DESCRIPTION                      = "Effective wavelength of 20th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 145                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 21                                       
+  NAME                             = "EFF_WL_21"                              
+  DESCRIPTION                      = "Effective wavelength of 21st bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 152                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 22                                       
+  NAME                             = "EFF_WL_22"                              
+  DESCRIPTION                      = "Effective wavelength of 22nd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 159                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 23                                       
+  NAME                             = "EFF_WL_23"                              
+  DESCRIPTION                      = "Effective wavelength of 23rd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 166                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 24                                       
+  NAME                             = "EFF_WL_24"                              
+  DESCRIPTION                      = "Effective wavelength of 24th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 173                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 25                                       
+  NAME                             = "EFF_WL_25"                              
+  DESCRIPTION                      = "Effective wavelength of 25th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 180                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 26                                       
+  NAME                             = "EFF_WL_26"                              
+  DESCRIPTION                      = "Effective wavelength of 26th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 187                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 27                                       
+  NAME                             = "EFF_WL_27"                              
+  DESCRIPTION                      = "Effective wavelength of 27th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 194                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 28                                       
+  NAME                             = "EFF_WL_28"                              
+  DESCRIPTION                      = "Effective wavelength of 28th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 201                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 29                                       
+  NAME                             = "EFF_WL_29"                              
+  DESCRIPTION                      = "Effective wavelength of 29th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 208                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 30                                       
+  NAME                             = "EFF_WL_30"                              
+  DESCRIPTION                      = "Effective wavelength of 30th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 215                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 31                                       
+  NAME                             = "EFF_WL_31"                              
+  DESCRIPTION                      = "Effective wavelength of 31st bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 222                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 32                                       
+  NAME                             = "EFF_WL_32"                              
+  DESCRIPTION                      = "Effective wavelength of 32nd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 229                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 33                                       
+  NAME                             = "EFF_WL_33"                              
+  DESCRIPTION                      = "Effective wavelength of 33rd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 236                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 34                                       
+  NAME                             = "EFF_WL_34"                              
+  DESCRIPTION                      = "Effective wavelength of 34th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 243                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 35                                       
+  NAME                             = "EFF_WL_35"                              
+  DESCRIPTION                      = "Effective wavelength of 35th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 250                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 36                                       
+  NAME                             = "EFF_WL_36"                              
+  DESCRIPTION                      = "Effective wavelength of 36th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 257                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 37                                       
+  NAME                             = "EFF_WL_37"                              
+  DESCRIPTION                      = "Effective wavelength of 37th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 264                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 38                                       
+  NAME                             = "EFF_WL_38"                              
+  DESCRIPTION                      = "Effective wavelength of 38th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 271                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 39                                       
+  NAME                             = "EFF_WL_39"                              
+  DESCRIPTION                      = "Effective wavelength of 39th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 278                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 40                                       
+  NAME                             = "EFF_WL_40"                              
+  DESCRIPTION                      = "Effective wavelength of 40th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 285                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 41                                       
+  NAME                             = "EFF_WL_41"                              
+  DESCRIPTION                      = "Effective wavelength of 41st bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 292                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 42                                       
+  NAME                             = "EFF_WL_42"                              
+  DESCRIPTION                      = "Effective wavelength of 42nd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 299                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 43                                       
+  NAME                             = "EFF_WL_43"                              
+  DESCRIPTION                      = "Effective wavelength of 43rd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 306                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 44                                       
+  NAME                             = "EFF_WL_44"                              
+  DESCRIPTION                      = "Effective wavelength of 44th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 313                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 45                                       
+  NAME                             = "EFF_WL_45"                              
+  DESCRIPTION                      = "Effective wavelength of 45th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 320                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 46                                       
+  NAME                             = "EFF_WL_46"                              
+  DESCRIPTION                      = "Effective wavelength of 46th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 327                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 47                                       
+  NAME                             = "EFF_WL_47"                              
+  DESCRIPTION                      = "Effective wavelength of 47th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 334                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 48                                       
+  NAME                             = "EFF_WL_48"                              
+  DESCRIPTION                      = "Effective wavelength of 48th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 341                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 49                                       
+  NAME                             = "EFF_WL_49"                              
+  DESCRIPTION                      = "Effective wavelength of 49th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 348                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 50                                       
+  NAME                             = "EFF_WL_50"                              
+  DESCRIPTION                      = "Effective wavelength of 50th bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 355                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 51                                       
+  NAME                             = "EFF_WL_51"                              
+  DESCRIPTION                      = "Effective wavelength of 51st bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 362                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+ OBJECT                            = COLUMN                                   
+  COLUMN_NUMBER                    = 52                                       
+  NAME                             = "EFF_WL_52"                              
+  DESCRIPTION                      = "Effective wavelength of 52nd bandpass"  
+  UNIT                             = "MICRON"                                 
+  DATA_TYPE                        = "ASCII_REAL"                             
+  START_BYTE                       = 369                                      
+  BYTES                            = 6                                        
+  FORMAT                           = "F6.4"                                   
+ END_OBJECT                        = COLUMN                                   
+                                                                              
+END_OBJECT                         = TABLE                                    
+END                                                                           

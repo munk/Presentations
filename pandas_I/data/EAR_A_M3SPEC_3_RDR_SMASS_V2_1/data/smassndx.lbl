@@ -1,0 +1,103 @@
+PDS_VERSION_ID        = PDS3                                                  
+                                                                              
+RECORD_TYPE           = "FIXED_LENGTH"                                        
+RECORD_BYTES          = 55                                                    
+FILE_RECORDS          = 316                                                   
+                                                                              
+^TABLE                = "smassndx.tab"                                        
+                                                                              
+DATA_SET_ID           = "EAR-A-M3SPEC-3-RDR-SMASS-V2.1"                       
+PRODUCT_NAME          = "SMASS Index Table"                                   
+PRODUCT_ID            = "SMASS-SMASSNDX-200012"                               
+INSTRUMENT_HOST_NAME  = "MICHIGAN-DARTMOUTH-MIT OBSERVATORY"                  
+INSTRUMENT_NAME       = "MARK III SPECTROGRAPH"                               
+TARGET_NAME           = "ASTEROID"                                            
+TARGET_TYPE           = "ASTEROID"                                            
+START_TIME            = 1990                                                  
+STOP_TIME             = 1994                                                  
+PRODUCT_CREATION_TIME = 2000-12-12                                            
+RECORD_FORMAT         = "(i5,1x,a8,1x,2(i6,1x),i3,1x,a19)"                    
+                                                                              
+OBJECT     = TABLE                                                            
+  ROWS               = 316                                                    
+  ROW_BYTES          = 54                                                     
+  INTERCHANGE_FORMAT = "ASCII"                                                
+  COLUMNS            = 6                                                      
+  DESCRIPTION        = "This index file points to the records corresponding   
+    to the spectrum of each particular asteroid in the SMASS.TAB file, which  
+    contains all the SMASS spectra. It also provides the names of the files   
+    containing the individual spectra for each object."                       
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 1                                                         
+    NAME          = "AST_NUMBER"                                              
+    DATA_TYPE     = "ASCII_INTEGER"                                           
+    START_BYTE    = 1                                                         
+    BYTES         = 5                                                         
+    FORMAT        = "I5"                                                      
+    DESCRIPTION   = "Catalog number of numbered asteroids, if any"            
+    NOT_APPLICABLE_CONSTANT = 0                                               
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 2                                                         
+    NAME          = "PROV_ID"                                                 
+    DATA_TYPE     = "CHARACTER"                                               
+    START_BYTE    = 7                                                         
+    BYTES         = 8                                                         
+    FORMAT        = "A8"                                                      
+    DESCRIPTION   = "IAU provisional designation for this                     
+      object, where provided"                                                 
+    NOT_APPLICABLE_CONSTANT = "---"                                           
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 3                                                         
+    NAME          = "START_RECORD"                                            
+    DATA_TYPE     = "ASCII_INTEGER"                                           
+    START_BYTE    = 16                                                        
+    BYTES         = 6                                                         
+    FORMAT        = "I6"                                                      
+    DESCRIPTION   = "The starting record number in the 'smass.tab'            
+      file of the spectrum corresponding to this index entry."                
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 4                                                         
+    NAME          = "END_RECORD"                                              
+    DATA_TYPE     = "ASCII_INTEGER"                                           
+    START_BYTE    = 23                                                        
+    BYTES         = 6                                                         
+    FORMAT        = "I6"                                                      
+    DESCRIPTION   = "The ending record number in the 'smass.tab'              
+      file of the spectrum corresponding to this index entry."                
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 5                                                         
+    NAME          = "RECORDS"                                                 
+    DATA_TYPE     = "ASCII_INTEGER"                                           
+    START_BYTE    = 30                                                        
+    BYTES         = 3                                                         
+    FORMAT        = "I3"                                                      
+    DESCRIPTION   = "The number of records comprising the                     
+      spectrum."                                                              
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER = 6                                                         
+    NAME          = "SPECTRUM_FILE"                                           
+    DATA_TYPE     = "CHARACTER"                                               
+    START_BYTE    = 34                                                        
+    BYTES         = 19                                                        
+    FORMAT        = "A19"                                                     
+    DESCRIPTION   = "Filename (without extension) of the individual           
+      spectrum file for this object. The file name is the asteroid number     
+      where that exists, or the provisional designation (with blanks removed) 
+      where it does not. The file name is left-justified in this field. The   
+      spectrum file itself will have an extension of '.tab', while the        
+      corresponding PDS label will have an extension of '.lbl'."              
+  END_OBJECT = COLUMN                                                         
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           

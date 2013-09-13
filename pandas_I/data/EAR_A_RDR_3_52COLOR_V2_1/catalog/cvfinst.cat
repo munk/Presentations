@@ -1,0 +1,34 @@
+PDS_VERSION_ID                     = PDS3                                     
+LABEL_REVISION_NOTE                = "08 Dec 1998  a.c.raugh   Checked for PDS
+        3 compliance prior to ingest;                                         
+        20 Mar 2004  t.l.brown   Format for ingest"                           
+                                                                              
+OBJECT                             = INSTRUMENT                               
+ INSTRUMENT_ID                     = "CVF"                                    
+ INSTRUMENT_HOST_ID                = "OBS376T3"                               
+                                                                              
+ OBJECT                            = INSTRUMENT_INFORMATION                   
+  INSTRUMENT_NAME                  = "CIRCULARLY VARIABLE FILTER"             
+  INSTRUMENT_TYPE                  = "INFRARED PHOTOMETER"                    
+  INSTRUMENT_DESC                  = "                                        
+                                                                              
+                                                                              
+  Instrument Overview                                                         
+  ===================                                                         
+    This document describes the instrument used to obtain the infrared        
+    spectrum of 951 Gaspra reported in Goldader et al. 1991, A. J.            
+    102, 1503-1509 [GOLDADERETAL1991].  The instrumentation consisted         
+    of a double CVF with a liquid nitrogen cooled InSb photometer.            
+    The short half of the CVF (denoted DCS) covered the region from           
+    ~0.8 - 1.6 microns with 3% resolution, and the long half (denoted         
+    DCL) covered ~1.5 - 2.5 microns at 5% resolution.  For this               
+    spectrum, every other position of the CVF was sampled for the DCS         
+    data.null"                                                                
+ END_OBJECT                        = INSTRUMENT_INFORMATION                   
+                                                                              
+ OBJECT                            = INSTRUMENT_REFERENCE_INFO                
+  REFERENCE_KEY_ID                 = "BUGAYEVSKIY&SNYD1995"                   
+ END_OBJECT                        = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+END_OBJECT                         = INSTRUMENT                               
+END                                                                           

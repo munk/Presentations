@@ -1,0 +1,97 @@
+PDS_VERSION_ID        = PDS3                                                  
+                                                                              
+RECORD_TYPE           = "FIXED_LENGTH"                                        
+RECORD_BYTES          = 32                                                    
+FILE_RECORDS          = 315                                                   
+                                                                              
+^TABLE                = "smasspc.tab"                                         
+                                                                              
+DATA_SET_ID           = "EAR-A-M3SPEC-3-RDR-SMASS-V2.1"                       
+PRODUCT_NAME          = "SMASS Principal Components Table"                    
+PRODUCT_ID            = "SMASS-SMASSPC-200012"                                
+INSTRUMENT_HOST_NAME  = "MICHIGAN-DARTMOUTH-MIT OBSERVATORY"                  
+INSTRUMENT_NAME       = "MARK III SPECTROGRAPH"                               
+TARGET_NAME           = "ASTEROID"                                            
+START_TIME            = 1990                                                  
+STOP_TIME             = 1994                                                  
+PRODUCT_CREATION_TIME = 2000-12-12                                            
+RECORD_FORMAT         = "(i5,1x,a8,1x,f7.3,1x,f6.3)"                          
+                                                                              
+OBJECT     = TABLE                                                            
+  ROWS               = 315                                                    
+  ROW_BYTES          = 32                                                     
+  INTERCHANGE_FORMAT = "ASCII"                                                
+  COLUMNS            = 4                                                      
+  DESCRIPTION        = "Principal component analysis (PCA) is a multivariate  
+    analysis technique that transforms a set of correlated variables into a   
+    new set of uncorrelated variables called principal components.  PCA       
+    requires no underlying assumptions.  The principal components are linear  
+    combinations of the original variables and are derived in decreasing      
+    order of importance, so that the first principal component accounts for   
+    the largest possible amount of variance within the dataset.  The second   
+    principal component will account for the second largest amount of the     
+    original variance.  For this dataset, polynomial fits to the scaled       
+    reflectances formed the original variable set from which the principal    
+    components were derived.  The first and second principal components,      
+    containing 870f the variance distribution information, are included here. 
+    The first principal component appears to be correlated to the ultraviolet 
+    absorption band and the second to the near-infrared absorption band.      
+                                                                              
+         Prior to performing the PCA, the spectra were fitted with high (7th  
+    to 9th) order polynomials as a means of smoothing the data.  From this    
+    smoothing, 50 points were chosen from the polynomial with wavelength      
+    coverage ranging from 4800 to 9700 A, with a point for every 100 A.       
+                                                                              
+         The spectrum of asteroid 5145 Pholus is so different from that of    
+    the other asteroids surveyed that it would fall far away from the         
+    others in principal component space.  Asteroid 5145 Pholus was omitted    
+    from the analysis for that reason.                                        
+                                                                              
+         See Xu et al. 1995 (Icarus 115, 1-35) for further information        
+    and discussion."                                                          
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER           = 1                                               
+    NAME                    = "AST_NUMBER"                                    
+    DATA_TYPE               = "ASCII_INTEGER"                                 
+    START_BYTE              = 1                                               
+    BYTES                   = 5                                               
+    FORMAT                  = "I5"                                            
+    DESCRIPTION             = "Catalog number of the asteroid, if any"        
+    NOT_APPLICABLE_CONSTANT = 0                                               
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER           = 2                                               
+    NAME                    = "PROV_ID"                                       
+    DATA_TYPE               = "CHARACTER"                                     
+    START_BYTE              = 7                                               
+    BYTES                   = 8                                               
+    FORMAT                  = "A8"                                            
+    DESCRIPTION             = "IAU provisional designation of the             
+      asteroid,where provided"                                                
+    NOT_APPLICABLE_CONSTANT = "---"                                           
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER    = 3                                                      
+    NAME             = "PC1"                                                  
+    DATA_TYPE        = "ASCII_REAL"                                           
+    START_BYTE       = 16                                                     
+    BYTES            = 7                                                      
+    FORMAT           = "F7.3"                                                 
+    DESCRIPTION      = "First principal component"                            
+  END_OBJECT = COLUMN                                                         
+                                                                              
+  OBJECT     = COLUMN                                                         
+    COLUMN_NUMBER    = 4                                                      
+    NAME             = "PC2"                                                  
+    DATA_TYPE        = "ASCII_REAL"                                           
+    START_BYTE       = 24                                                     
+    BYTES            = 6                                                      
+    FORMAT           = "F6.3"                                                 
+    DESCRIPTION      = "Second principal component"                           
+  END_OBJECT = COLUMN                                                         
+                                                                              
+END_OBJECT = TABLE                                                            
+END                                                                           

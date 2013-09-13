@@ -1,0 +1,8 @@
+%R 2005PDSS...28B
+%A Bell, J. F.;Owensby, P.D.;Hawke, B.R.;Brown, R.H.;Cruikshank, D.;Hartmann, W.K.
+%T 52-color Asteroid Survey
+%D 01/2005
+%J NASA Planetary Data System, EAR-A-RDR-3-52COLOR-V2.1
+%U http://pdsquery.jpl.nasa.gov/query?Identifier=EAR-A-RDR-3-52COLOR-V2.1&resclass=data.dataset
+%B This data set contains 52-color IR data of asteroids, taken using a double circularly variable filter. The short wavelength portion of the CVF covered the octave from 0.8 to 1.6 microns with 3 percent resolution, while the long wavelength portion covered 1.5 to 2.6 microns with 5 percent resolution.  Most of the data are unpublished other than in this PDS data set.
+
